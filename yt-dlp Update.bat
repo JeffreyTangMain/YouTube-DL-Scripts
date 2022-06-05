@@ -1,3 +1,5 @@
 echo off
-yt-dlp.exe -U
-pause
+
+for /f "usebackq delims=" %%A in ("0_Variables.txt") do %%A
+
+%update%
