@@ -1,10 +1,10 @@
 echo off
 
 set location=%~dp0
-set downloadCommand="%location%\%%(title)s.%%(ext)s"
+set downloadCommand=%location%
 
 IF EXIST yt-dlp.exe (
-    set downloadCommand="%location%\Downloaded Video\%%(title)s.%%(ext)s"
+    set downloadCommand=%location%\Downloaded Video
 ) ELSE (
     cd..
 )
@@ -15,7 +15,7 @@ set /p url=URL:
 IF NOT %ERRORLEVEL%==0 GOTO :justUpdate
 
 :download
-%downloadMP3% %downloadCommand% %url%
+%downloadMP3% "%downloadCommand%\%%(title)s.%%(ext)s" %url%
 exit
 
 :justUpdate

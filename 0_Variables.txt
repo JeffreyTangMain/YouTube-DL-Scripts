@@ -1,3 +1,3 @@
 SET downloadMP3=yt-dlp.exe -f bestaudio/best --audio-quality 0 --extract-audio --audio-format mp3 --fixup detect_or_warn --add-metadata --embed-thumbnail -i -o
-SET downloadMP4=yt-dlp.exe -f bestvideo*[ext=mp4]+bestaudio/best[ext=mp4]/best --audio-quality 0 --fixup detect_or_warn --add-metadata --embed-thumbnail -i -o
+SET downloadMP4=yt-dlp.exe -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best --audio-quality 0 --fixup detect_or_warn --add-metadata --embed-thumbnail -i -o
 SET update=yt-dlp.exe -U
